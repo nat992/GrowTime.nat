@@ -24,6 +24,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewScreenSizes
 import com.example.growtime.ui.theme.GrowTimeTheme
+import android.content.Intent
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
 /*class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +46,12 @@ class MainActivity : ComponentActivity() {
 
         setContentView(R.layout.activity_main)
 
+        val button = findViewById<Button>(R.id.RecommendButton)
+
+        button.setOnClickListener {
+            val intent = Intent(this@MainActivity, RecommendSceneActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
 
