@@ -26,7 +26,7 @@ import androidx.compose.ui.tooling.preview.PreviewScreenSizes
 import com.example.growtime.ui.theme.GrowTimeTheme
 import android.content.Intent
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
+// import androidx.appcompat.app.AppCompatActivity
 
 /*class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +52,14 @@ class MainActivity : ComponentActivity() {
             val intent = Intent(this@MainActivity, RecommendSceneActivity::class.java)
             startActivity(intent)
         }
+
+        val button2 = findViewById<Button>(R.id.Honors_button)
+
+        button2.setOnClickListener {
+            val intent = Intent(this@MainActivity, HonExtSceneActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
 
