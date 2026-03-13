@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GrowTime">
         <activity
+            android:name=".HonExtSceneActivity"
+            android:exported="false" />
+        <activity
             android:name=".RecommendSceneActivity"
             android:exported="false" />
         <activity
