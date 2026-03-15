@@ -63,4 +63,13 @@ public class ExampleInstrumentedTestJava {
         intended(hasComponent(HonExtSceneActivity.class.getName()));
         release();
     }
+
+    @Test
+    public void test4_user_should_type_in_plant() {
+        onView(withId(R.id.plant_name))
+                .perform(replaceText("tulips"));
+
+        onView(withId(R.id.plant_name))
+                .check(matches(withText("01852")));
+    }
 }
