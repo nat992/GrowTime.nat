@@ -60,6 +60,13 @@ class MainActivity : ComponentActivity() {
             startActivity(intent)
         }
 
+        val button3 = findViewById<Button>(R.id.LocationButton)
+
+        button3.setOnClickListener {
+            val intent = Intent(this@MainActivity, LocationSceneActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
 
