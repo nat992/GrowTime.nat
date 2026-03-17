@@ -72,4 +72,12 @@ public class ExampleInstrumentedTestJava {
         onView(withId(R.id.plant_name))
                 .check(matches(withText("01852")));
     }
+
+    @Test
+    public void test5_locationButton_opensLocationSceneActivity() {
+        init();
+        onView(withId(R.id.LocationButton)).perform(click());
+        intended(hasComponent(LocationSceneActivity.class.getName()));
+        release();
+    }
 }
