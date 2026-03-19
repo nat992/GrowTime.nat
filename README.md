@@ -19,7 +19,7 @@ The app reduces the frustration many beginner gardeners face by combining plant 
 * [Architecture](#architecture)
 * [Tech Stack](#tech-stack)
 * [Installation](#installation)
-* [Testing](#testing)
+* [Testing](#Building-and-testing)
 * [Usage](#usage)
 * [Evaluation](#evaluation)
 * [Future Improvements](#future-improvements)
@@ -164,7 +164,7 @@ git clone https://github.com/chesseraf/GrowTime
 
 1. Open the project in **Android Studio**
 2. On the top right, there is a side bar with 5 options. Open the device manager (3rd one)
-3. Click "Add a new device..." -> "Create a virtual device" -> "medium phone" -> finish
+3. Click "Add a new device..." -> "Create a virtual device" -> "medium phone" -> "finish"
 4. This will take a bit to install this phone. Once installed, click run next to this medium phone in the device manager
 5. Click "run app" which is a triangle in the top of the screen
 6. The phone should launch the app on the right side of the screen
@@ -175,12 +175,16 @@ Below are some problems that have been encountered and what was done to solve th
 
 ---
 
-# testing
-To run automated tests, run the following command:
-
+# Building and testing
+To run automated tests and build, run the following command:
+```
 ./gradlew connectedAndroidTest
-
+```
 If the build fails, it will show which tests failed. While it is running, you can see what some of the tests are doing on the device shown on the right side of the screen.
+
+
+# Coding tests
+The code for the tests is in the folder "app\src\androidTest\java\com\example\growtime"
 
 # 🚀 Usage
 
