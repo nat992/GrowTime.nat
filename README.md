@@ -19,6 +19,7 @@ The app reduces the frustration many beginner gardeners face by combining plant 
 * [Architecture](#architecture)
 * [Tech Stack](#tech-stack)
 * [Installation](#installation)
+* [Testing](#testing)
 * [Usage](#usage)
 * [Evaluation](#evaluation)
 * [Future Improvements](#future-improvements)
@@ -142,20 +143,44 @@ Generates notifications for watering and other plant care tasks.
 * Android SDK
 * Java 8+
 
+Steps for installing android studio:
+If you do not have Jet Brains Tool Box installed yet, install it with steps 1-3
+1) Navigate to https://www.jetbrains.com/toolbox-app/
+2) Click the drop down on the ".exe" next to the purple download button and select the option 
+that corresponds to your machine. e.g. ".exe (Windows)" for a Windows machine.
+3) Click download
+4) Once it is installed, open the downloaded file. 
+5) Click next/ok if it asks for something during setup. 
+6) Search for android studio under tools and install it.
+7) Click next/ok if it asks for something during setup.
+
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/growtime.git
+git clone https://github.com/chesseraf/GrowTime
 ```
 
 ### Run the Application
 
 1. Open the project in **Android Studio**
-2. Allow Gradle to sync dependencies
-3. Launch an Android emulator or connect a device
-4. Click **Run**
+2. On the top right, there is a side bar with 5 options. Open the device manager (3rd one)
+3. Click "Add a new device..." -> "Create a virtual device" -> "medium phone" -> finish
+4. This will take a bit to install this phone. Once installed, click run next to this medium phone in the device manager
+5. Click "run app" which is a triangle in the top of the screen
+6. The phone should launch the app on the right side of the screen
+### What to do if it did not launch
+Below are some problems that have been encountered and what was done to solve them.
+1. If it says that gradle needs to sync in the top of the screen, let it sync
+2. If the option to run does not appear, it may need to be built. Click the hammer which is the 6th from the bottom in the tool bar on the bottom left corner. Then click the hammer next to it to build. After building, try launching again.
 
 ---
+
+# testing
+To run automated tests, run the following command:
+
+./gradlew connectedAndroidTest
+
+If the build fails, it will show which tests failed. While it is running, you can see what some of the tests are doing on the device shown on the right side of the screen.
 
 # 🚀 Usage
 
