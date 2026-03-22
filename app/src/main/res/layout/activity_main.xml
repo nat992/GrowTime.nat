@@ -7,7 +7,7 @@
     android:padding="16dp">
 
     <TextView
-        android:text="GrowTime"
+        android:text="@string/GrowTime"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="center"
@@ -19,36 +19,42 @@
         android:id="@+id/RecommendButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recommend Plants"
+        android:text="@string/RecommendPlants"
         android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/Honors_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Can I Grow This Here?"
+        android:text="@string/CanIGrowThisHere"
         android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/LocationButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Location"
+        android:text="@string/Location"
         android:layout_gravity="center"/>
 
-    <!--<ImageButton
+    <Button
+        android:id="@+id/MyGarden"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="A tiny Android icon"
-        android:src="@drawable/baseline_android_24"
-        app:tint="#ff0000" />
+        android:text="@string/MyGarden"
+        android:layout_gravity="center"/>
 
     <Button
+        android:id="@+id/addPlantHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I'm a button with an icon"
-        android:drawableStart="@drawable/baseline_android_24"
-        android:drawablePadding="4dp"
-        android:drawableTint="#ff0000" /> -->
+        android:layout_gravity="center"
+        android:text="@string/AddPlant" />
+
+    <Button
+        android:id="@+id/editPlantHome"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/EditPlant" />
 
 </LinearLayout>

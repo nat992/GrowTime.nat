@@ -66,7 +66,19 @@ class MainActivity : ComponentActivity() {
             val intent = Intent(this@MainActivity, LocationSceneActivity::class.java)
             startActivity(intent)
         }
+        val button4 = findViewById<Button>(R.id.addPlantHome)
 
+        button4.setOnClickListener {
+            val intent = Intent(this@MainActivity, AddPlantSceneActivity::class.java)
+            startActivity(intent)
+        }
+
+        val button5 = findViewById<Button>(R.id.editPlantHome)
+
+        button5.setOnClickListener {
+            val intent = Intent(this@MainActivity, EditPlantSceneActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
 

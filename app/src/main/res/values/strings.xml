@@ -5,4 +5,11 @@
     <string name="submit">Submit</string>
     <string name="inp_zc">Enter Valid U.S. Zip Code</string>
     <string name="rec_title">GrowTime Plant Recommendation</string>
+    <string name="MyGarden">My Garden</string>
+    <string name="Location">Location</string>
+    <string name="GrowTime">GrowTime</string>
+    <string name="RecommendPlants">Recommend Plants</string>
+    <string name="CanIGrowThisHere">Can I Grow This Here?</string>
+    <string name="AddPlant">Add Plant</string>
+    <string name="EditPlant">Edit Plant</string>
 </resources>
