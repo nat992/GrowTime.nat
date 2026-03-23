@@ -1,103 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HorizontalScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fillViewport="true">
-    <LinearLayout
-        android:id="@+id/main"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView
-            android:text="@string/EditPlant"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
+        <LinearLayout
+            android:id="@+id/main"
+            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"
+            android:padding="16dp">
 
+            <TextView
+                android:text="@string/EditPlant"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-        <TextView
-            android:id="@+id/zip_res"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="@string/zip_appear"
-            android:minHeight="48dp" />
+            <TextView
+                android:id="@+id/zip_res"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/zip_appear"
+                android:minHeight="48dp" />
 
-        <TextView
-            android:layout_width="155dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Plant picture goes here" />
+            <TextView
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Plant picture goes here" />
 
-        <TextView
-            android:id="@+id/hard_zone"
-            android:layout_width="155dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Plantname"/>
+            <TextView
+                android:id="@+id/hard_zone"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Plantname"/>
 
-        <TextView
-            android:layout_width="193dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Get watering reminders" />
+            <TextView
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Get watering reminders" />
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="indoor" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="indoor" />
 
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Watering frequency" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Watering frequency" />
 
-        <TextView
-            android:layout_width="182dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="20dp"
-            android:hint="# of days - modifiable" />
+            <TextView
+                android:layout_width="182dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:hint="# of days - modifiable" />
 
-        <Button
-            android:id="@+id/Save_edit"
-            android:layout_width="145dp"
-            android:layout_height="wrap_content"
-            android:drawablePadding="4dp"
-            android:scaleType="fitCenter"
-            android:text="Save" />
+            <Button
+                android:id="@+id/Save_edit"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:scaleType="fitCenter"
+                android:text="Save" />
 
-        <Button
-            android:id="@+id/cancel_edit"
-            android:layout_width="144dp"
-            android:layout_height="wrap_content"
-            android:drawablePadding="4dp"
-            android:scaleType="fitCenter"
-            android:text="Cancel" />
-        <Button
-            android:id="@+id/delete_plant"
-            android:layout_width="144dp"
-            android:layout_height="wrap_content"
-            android:drawablePadding="4dp"
-            android:scaleType="fitCenter"
-            android:text="delete" />
+            <Button
+                android:id="@+id/cancel_edit"
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:scaleType="fitCenter"
+                android:text="Cancel" />
 
-    </LinearLayout>
-</HorizontalScrollView>
+            <Button
+                android:id="@+id/delete_plant"
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:scaleType="fitCenter"
+                android:text="delete" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

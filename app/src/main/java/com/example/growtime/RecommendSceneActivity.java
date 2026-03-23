@@ -1,12 +1,9 @@
 package com.example.growtime;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
-/*import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;*/
 import androidx.activity.ComponentActivity;
 
 import android.widget.Button;
@@ -16,6 +13,7 @@ import android.view.View;
 
 import com.example.growtime.access_hardiness_zone.ApiCall;
 import com.example.growtime.access_hardiness_zone.DataModel;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class RecommendSceneActivity extends ComponentActivity {
 
@@ -34,17 +32,29 @@ public class RecommendSceneActivity extends ComponentActivity {
         hard = findViewById(R.id.hard_zone);
 
         Button button = findViewById(R.id.sub_butt);
-
         button.setOnClickListener(v -> {
             updateText(v);
             showZone(v);
         });
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_nav);
+        bottomNav.setSelectedItemId(R.id.nav_recommend);
+        bottomNav.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_honors) {
+                startActivity(new Intent(this, HonExtSceneActivity.class));
+                finish();
+            } else if (id == R.id.nav_my_plants) {
+                startActivity(new Intent(this, MyPlantsSceneActivity.class));
+                finish();
+            }
+            return true;
+        });
     }
 
-    public void updateText(View view){
+    public void updateText(View view) {
         String zip = zipcode_input.getText().toString();
-        String res = "Zip: " + zip;
-        zip_res.setText(res);
+        zip_res.setText("Zip: " + zip);
     }
 
     public void showZone(View view) {
