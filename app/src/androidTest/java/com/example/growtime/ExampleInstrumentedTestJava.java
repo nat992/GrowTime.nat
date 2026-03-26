@@ -86,4 +86,28 @@ public class ExampleInstrumentedTestJava {
         intended(hasComponent(LocationSceneActivity.class.getName()));
         release();
     }
+
+    @Test
+    public void test8_MyGardenButton_opensMyPlantsScene() {
+        init();
+        onView(withId(R.id.MyGarden)).perform(click());
+        intended(hasComponent(MyPlantsSceneActivity.class.getName()));
+        release();
+    }
+
+    @Test
+    public void test9_addPlantsButton_AddPlantsScene() {
+        init();
+        onView(withId(R.id.addPlantHome)).perform(click());
+        intended(hasComponent(AddPlantSceneActivity.class.getName()));
+        release();
+    }
+
+    @Test
+    public void test10_editButton_opensEditPlantScene() {
+        init();
+        onView(withId(R.id.editPlantHome)).perform(click());
+        intended(hasComponent(EditPlantSceneActivity.class.getName()));
+        release();
+    }
 }
